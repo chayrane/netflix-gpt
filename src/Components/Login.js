@@ -4,14 +4,20 @@ import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  // const name = useRef(null);
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -41,6 +47,35 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+
+          // Update the profile (from firebase auth)
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/68692629?v=4",
+          })
+            .then(() => {
+              // Profile updated!
+
+              // BUG Fix: after registering first time the display name and photoURL is null.
+              // Updating the store.
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+
+              // Navigate to Browse page if authenticated/created succesfully.
+              navigate("/browse");
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error.message);
+            });
+
           console.log(user);
         })
         .catch((error) => {
@@ -59,6 +94,9 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
+
+          // Navigate to Browse page if authenticated/created succesfully.
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -87,7 +125,7 @@ const Login = () => {
         {!isSignInForm && (
           <input
             type="text"
-            // ref={name}
+            ref={name}
             placeholder="Full Name"
             className="p-4 mt-4 w-full bg-gray-800 rounded-md"
           />
