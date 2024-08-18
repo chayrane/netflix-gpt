@@ -1,5 +1,4 @@
 # Netflix GPT
-
 - Create React App
 - Configured TailwindCSS
 - Header
@@ -14,6 +13,10 @@
 - Implement Sign In user API
 - Created Redux Store with userSlice
 - Implemented Sign Out
+- BUG FIX: SignUp user displayName and profile picture udpate
+- BUG FIX: If the user is not logged in redirect /browse to Login Page and vice-versa
+- Unsubscribed to the onAuthStateChanged callback in Header Component
+- Add hardcoded (constants) values to constants file
 
 # Features
 - Login/Signup Page
