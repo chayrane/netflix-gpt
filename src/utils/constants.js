@@ -3,3 +3,13 @@ export const LOGO =
 
 export const USER_AVATAR =
   "https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e";
+
+// TMDB API Options.
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTUwZTM4N2Q0MjM1N2RiY2M3M2RlZDk2M2RjOWNkMSIsIm5iZiI6MTcyMzk3ODU5OS43MTAzMTksInN1YiI6IjY2YzFkMTdlMTVlMzIzZjQ4OGEyNmY4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.a3SyJ97cRbW1qlVPsz99KKpu6PfWyctonh7iw8Q6B4g",
+  },
+};
