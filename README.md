@@ -27,6 +27,8 @@
 - Update store with trailer video data
 - Embedded the youtube video and make it autoplay and mute
 - Tailwind classed to make main container look awesome
+- Build secondary component
+- Integrated browse page with Movie list & cards of 'Popular', 'Top Rated', & 'Upcoming' movies
 
 # Features
 - Login/Signup Page

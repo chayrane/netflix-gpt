@@ -52,20 +52,15 @@ const Header = () => {
 
   return (
     <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
-      <img
-        className="w-44"
-        src={LOGO}
-        alt="logo"
-      />
+      <img className="w-44" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex p-2">
-          <img
-            src={user.photoURL}
-            alt="usericon"
-            className="w-12 h-12"
-          />
-          <button onClick={handleSignOut} className="font-bold text-white">
-            (Sign Out)
+        <div className="flex p-2 gap-2">
+          <img src={user.photoURL} alt="usericon" className="w-12 h-12" />
+          <button
+            onClick={handleSignOut}
+            className="font-bold text-white bg-red-700 bg-opacity-90 px-4 h-12 rounded-lg hover:bg-opacity-80 transition-colors duration-400"
+          >
+            Sign Out
           </button>
         </div>
       )}
