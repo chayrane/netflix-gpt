@@ -29,6 +29,9 @@
 - Tailwind classed to make main container look awesome
 - Build secondary component
 - Integrated browse page with Movie list & cards of 'Popular', 'Top Rated', & 'Upcoming' movies
+- GPT Search Page
+- GPT Search Bar
+- FEATURE: Multi-Language Support Feature for GPT Page
 
 # Features
 - Login/Signup Page
