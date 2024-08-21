@@ -35,7 +35,9 @@
 - Register for OpenAI API & Get API Secret Key
 - Install npm openai package
 - Create a universal query for the search bar to get movies from GPT
-- UI Implementation for GptSearch 
+- UI Implementation for GptSearch
+- Moved serets to .env
+- API calls memoization 
 
 # Features
 - Login/Signup Page
