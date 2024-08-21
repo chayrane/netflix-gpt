@@ -38,6 +38,7 @@
 - UI Implementation for GptSearch
 - Moved serets to .env
 - API calls memoization 
+- UI mobile & desktop responsive 
 
 # Features
 - Login/Signup Page

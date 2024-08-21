@@ -5,20 +5,25 @@ import { NETFLIX_BG } from "../utils/constants";
 
 const GptSearchPage = () => {
   return (
-    <div>
-      {/* 
+    <>
+      <div className="fixed -z-10">
+        <img
+          src={NETFLIX_BG}
+          alt="nf-background-image"
+          className="h-screen object-cover"
+        />
+      </div>
+      <div>
+        {/* 
       ****** COMPONENT STRUCTURE *******
       GPT Search Bar
       GPT Movie Suggestion    
     */}
 
-      <div className="fixed -z-10">
-        <img src={NETFLIX_BG} alt="nf-background-image" />
+        <GptSearchBar />
+        <GptMovieSuggestions />
       </div>
-
-      <GptSearchBar />
-      <GptMovieSuggestions />
-    </div>
+    </>
   );
 };
 

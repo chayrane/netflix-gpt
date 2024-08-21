@@ -63,10 +63,10 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
-      <img className="w-44" src={LOGO} alt="logo" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex p-2 gap-2">
+        <div className="flex p-2 gap-2 justify-center">
           {showGptSearch && (
             <select
               className="text-white bg-gray-900 px-4 h-12 rounded-lg"

@@ -5,7 +5,7 @@ const MovieCard = ({ posterPath, imgAlt = "Movie Poster" }) => {
   if (!posterPath) return null;
 
   return (
-    <div className="w-48 hover:opacity-60 transition-opacity duration-300">
+    <div className="w-36 md:w-48 hover:opacity-60 transition-opacity duration-300">
       <img
         className="rounded-lg"
         src={MOVIES_CARD_IMG_CDN_URL + posterPath}

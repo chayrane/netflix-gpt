@@ -20,7 +20,7 @@ const SecondaryContainer = () => {
             - MovieList - Upcoming Movies
               - MovieCards * n
         */}
-        <div className="-mt-32 relative z-20">
+        <div className="mt-0 md:-mt-32 relative z-20">
           <MovieList
             title={"Now Playing Movies"}
             movies={movies.nowPlayingMovies}
