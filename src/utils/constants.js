@@ -24,3 +24,7 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTUwZTM4N2Q0MjM1N2RiY2M3M2RlZDk2M2RjOWNkMSIsIm5iZiI6MTcyMzk3ODU5OS43MTAzMTksInN1YiI6IjY2YzFkMTdlMTVlMzIzZjQ4OGEyNmY4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.a3SyJ97cRbW1qlVPsz99KKpu6PfWyctonh7iw8Q6B4g",
   },
 };
+
+// OpenAI  Secret Key
+export const OPENAI_SECRET_KEY =
+  "sk-xzse73tXeiZi7Rs4p72aZgqJvlhE5xJs_1JpS1uALoT3BlbkFJ1gnwnpvLkOTjTN6m6oIT09L7gElaZtJlcLBzEov6wA";
