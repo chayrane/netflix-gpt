@@ -10,7 +10,7 @@ const GptSearchPage = () => {
         <img
           src={NETFLIX_BG}
           alt="nf-background-image"
-          className="h-screen object-cover"
+          className="object-cover"
         />
       </div>
       <div>

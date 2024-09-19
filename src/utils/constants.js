@@ -25,5 +25,5 @@ export const API_OPTIONS = {
   },
 };
 
-// OpenAI  Secret Key
+// OpenAI Secret Key
 export const OPENAI_SECRET_KEY = process.env.REACT_APP_OPEN_API_SECRET_KEY;
